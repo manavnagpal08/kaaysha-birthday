@@ -1,5 +1,17 @@
 import { Kalam } from "next/font/google";
 import "./globals.css";
+import GlobalMusic from "../components/GlobalMusic"
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <GlobalMusic />
+        {children}
+      </body>
+    </html>
+  )
+}
 
 const kalam = Kalam({
   subsets: ["latin"],
